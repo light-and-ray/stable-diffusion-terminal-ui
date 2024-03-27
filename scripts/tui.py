@@ -1,11 +1,11 @@
 import sys
 from modules import shared, script_callbacks, errors
-from tui import sd_tui
 
 
 def main(demo, app):
+    from tui import sd_tui
     try:
-        sd_tui.runTUI()
+        sd_tui.runTUI()    
     except Exception:
         errors.report('***', exc_info=True)
     finally:
